@@ -7,6 +7,7 @@ Unreal project for [SEAMless](https://gtr.ukri.org/projects?ref=10011940) - Subs
 ### Prerequisites
 
 [Unreal Engine 5.2](https://www.unrealengine.com/en-US/download)
+[Cloud Compare](https://www.danielgm.net/cc/) for `.ply` -> `.las` conversion
 
 ### Packaging
 
