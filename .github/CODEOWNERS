@@ -1,5 +1,4 @@
 # Github CODEOWNERS file
 
 # Global code-owners for this repository
-
-- @grigtod @jonmattgray @nitro-marky
+* @grigtod @jonmattgray @nitro-marky
