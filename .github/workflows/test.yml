@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  push:
+    branches-ignore: ['main']
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull image
+        run: |
+          docker pull ghcr.io/epicgames/unreal-engine:dev-slim-5.2
