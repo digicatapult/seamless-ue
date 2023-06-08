@@ -41,6 +41,10 @@
 				"Mac",
 				"Linux"
 			]
+		},
+		{
+			"Name": "WebBrowserWidget",
+			"Enabled": true
 		}
 	]
 }
