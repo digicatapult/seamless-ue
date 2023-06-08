@@ -22,7 +22,7 @@ public:
 	 * @param directory		The absolute path to the directory to search. Ex: "C:\Projects\MyProject\"
 	 * @param folders		All the folders found.
 	 */
-	UFUNCTION(BlueprintPure, meta = (DisplayName = "List Folders in Directory", Keywords = "Folders,Directory"), Category = "SEAMless | ListFoldersInDirectory")
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "List Folders in Directory", Keywords = "Folders,Directory"), Category = "SEAMless | ListOptions")
 	static void ListFoldersInDirectory
 	( 
 		FString directory,  
@@ -36,7 +36,7 @@ public:
 	 * @param extension		Optional extension for files (if empty all files are found). Ex: ".txt"
 	 * @param files			All the files found.
 	 */
-	UFUNCTION(BlueprintPure, meta = (DisplayName = "List Files in Directory", Keywords = "Files,Directory"), Category = "SEAMless | ListFilesInDirectory")
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "List Files in Directory", Keywords = "Files,Directory"), Category = "SEAMless | ListOptions")
 	static void ListFilesInDirectory
 	(
 		FString directory,
@@ -50,7 +50,7 @@ public:
 	 * @param directory		The directory path to make
 	 * @return				true if directory is created successfully
 	 */
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Make Directory", Keywords = "Make,Directory"), Category = "SEAMless | MakeDir")
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Make Directory", Keywords = "Make,Directory"), Category = "SEAMless | FolderOptions")
 	static bool MakeDir
 	(
 		FString directory
@@ -63,7 +63,7 @@ public:
 	 * @param destFilePath		The file destination path
 	 * @return					true if file was copied successfully
 	 */
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Copy File", Keywords = "Copy,File"), Category = "SEAMless | CopyFile")
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Copy File", Keywords = "Copy,File"), Category = "SEAMless | FileOptions")
 	static bool CopyFile
 	(
 		FString sourceFilePath,
