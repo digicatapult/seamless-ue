@@ -73,4 +73,9 @@ Plugins/*/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
+# Exceptions
+!Other/checkType.exe
+!Other/ymlToCoords.exe
+!Other/createYMLfromBoundingBox.exe
+
 .DS_STORE
