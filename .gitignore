@@ -75,5 +75,7 @@ DerivedDataCache/*
 
 # Exceptions
 !Other/checkType.exe
+!Other/ymlToCoords.exe
+!Other/createYMLfromBoundingBox.exe
 
 .DS_STORE
