@@ -42,9 +42,50 @@ public:
 		float& y
 	);
 
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "GPS to Tile", Keywords = "GPS,XY,Tile"), Category = "SEAMless | Converters")
+	static void GPStoTile
+	(
+		float lat,
+		float lon,
+		float zoom, 
+		float& x,
+		float& y
+	);
+
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "GPS to Tile - Precise", Keywords = "GPS,XY,Tile,Precise"), Category = "SEAMless | Converters")
+	static void GPStoTile_Precise
+	(
+		double lat,
+		double lon,
+		double zoom,
+		double& x,
+		double& y
+	);
+
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Tile to GPS", Keywords = "GPS,XY,Tile"), Category = "SEAMless | Converters")
+	static void TileToGPS
+	(
+		float x,
+		float y,
+		float zoom,
+		float& lat,
+		float& lon
+	);
+
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Tile to GPS - Precise", Keywords = "GPS,XY,Tile,Precise"), Category = "SEAMless | Converters")
+	static void TileToGPS_Precise
+	(
+		double x,
+		double y,
+		double zoom,
+		double& lat,
+		double& lon
+	);
+
 private:
 	static float GetRadiusAtLat(float _lat);
-
+	static float sec(float x);
+	static double sec_precise(double x);
 };
 
 const float kEarthRadiusEquator = 6378137.0;

@@ -49,6 +49,66 @@ void UCoordsConverter::GPStoScreenXY
     y = tl_scr_y + (br_scr_y - tl_scr_y) * perY; 
 }
 
+void UCoordsConverter::GPStoTile
+(
+    float lat,
+    float lon,
+    float zoom,
+    float& x,
+    float& y
+)
+{
+    float n = powf(2, zoom);
+    float lat_rad = (lat * PI) / 180;
+    x = n * ((lon + 180) / 360);
+    y = n * (1 - (log(tan(lat_rad) + sec(lat_rad)) / PI)) / 2;
+}
+
+void UCoordsConverter::GPStoTile_Precise
+(
+    double lat,
+    double lon,
+    double zoom,
+    double& x,
+    double& y
+)
+{
+    double n = powf(2, zoom);
+    double lat_rad = (lat * PI) / 180;
+    x = n * ((lon + 180) / 360);
+    y = n * (1 - (log(tan(lat_rad) + sec_precise(lat_rad)) / PI)) / 2;
+}
+
+void UCoordsConverter::TileToGPS
+(
+    float x,
+    float y,
+    float zoom,
+    float& lat,
+    float& lon
+)
+{ 
+    float n = powf(2, zoom);
+    lon = x / n * 360 - 180;
+    float lat_rad = atan(sinh(PI * (1 - 2 * y / n)));
+    lat = lat_rad * 180 / PI;
+}
+
+void UCoordsConverter::TileToGPS_Precise
+(
+    double x,
+    double y,
+    double zoom,
+    double& lat,
+    double& lon
+)
+{
+    double n = powf(2, zoom);
+    lon = x / n * 360 - 180;
+    double lat_rad = atan(sinh(PI * (1 - 2 * y / n)));
+    lat = lat_rad * 180 / PI;
+}
+
 float UCoordsConverter::GetRadiusAtLat(float _lat)
 {
     float lat_rad = _lat * (PI / 180);
@@ -60,3 +120,12 @@ float UCoordsConverter::GetRadiusAtLat(float _lat)
     return sqrt((f1 + f2) / (f3 + f4));
 }
 
+float UCoordsConverter::sec(float x)
+{
+    return 1 / cos(x);
+}
+
+double UCoordsConverter::sec_precise(double x)
+{
+    return 1.0 / cos(x);
+}

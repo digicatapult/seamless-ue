@@ -79,3 +79,4 @@ DerivedDataCache/*
 !Other/createYMLfromBoundingBox.exe
 
 .DS_STORE
+Other/tokens.json
