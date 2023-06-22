@@ -1,0 +1,2 @@
+Useful to evaluate app alignment
+Converts csv mission file to gpx file that could be opened in a gpx viewer
