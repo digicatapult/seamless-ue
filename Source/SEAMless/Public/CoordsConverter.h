@@ -82,8 +82,29 @@ public:
 		double& lon
 	);
 
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Resolution - meters in pixel - Precise", Keywords = "Res,Meters,Pixel,Precise"), Category = "SEAMless | Converters")
+	static void ResMetersInPixel_Precise
+	(
+		double lat,
+		double tileSizeInPixels,
+		double zoomLevel,
+		double& metersInPixel 
+	);
+
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Get Offset Lat Lon - Precise", Keywords = "Km,Deg,Precise"), Category = "SEAMless | Converters")
+	static void GetOffsetLatLon_Precise
+	(
+		double lat,
+		double lon,
+		double offset_meters_lat,
+		double offset_meters_lon,
+		double& new_lat,
+		double& new_lon
+	);
+
 private:
 	static float GetRadiusAtLat(float _lat);
+	static double GetRadiusAtLat_Precise(double _lat);
 	static float sec(float x);
 	static double sec_precise(double x);
 };

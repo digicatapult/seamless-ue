@@ -109,6 +109,34 @@ void UCoordsConverter::TileToGPS_Precise
     lat = lat_rad * 180 / PI;
 }
 
+void UCoordsConverter::ResMetersInPixel_Precise
+(
+    double lat,
+    double tileSizeInPixels,
+    double zoomLevel,
+    double& metersInPixel
+)
+{
+    //https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale
+    metersInPixel = (40075.016686 * 1000 / tileSizeInPixels) * cos(lat) / (pow(2, zoomLevel));
+}
+
+void UCoordsConverter::GetOffsetLatLon_Precise
+(
+    double lat,
+    double lon,
+    double offset_meters_lat,
+    double offset_meters_lon,
+    double& new_lat,
+    double& new_lon
+)
+{
+    //https://stackoverflow.com/questions/7477003/calculating-new-longitude-latitude-from-old-n-meters
+    float radius = GetRadiusAtLat_Precise(lat);
+    new_lat = lat + (offset_meters_lat / radius) * (180 / PI);
+    new_lon = lon + (offset_meters_lon / radius) * (180 / PI) / cos(lat * PI/180);
+}
+
 float UCoordsConverter::GetRadiusAtLat(float _lat)
 {
     float lat_rad = _lat * (PI / 180);
@@ -117,6 +145,18 @@ float UCoordsConverter::GetRadiusAtLat(float _lat)
     float f3 = pow((kEarthRadiusEquator * cos(lat_rad)), 2);
     float f4 = pow((kEarthRadiusPole * sin(lat_rad)), 2);
      
+    return sqrt((f1 + f2) / (f3 + f4));
+}
+
+
+double UCoordsConverter::GetRadiusAtLat_Precise(double _lat)
+{
+    double lat_rad = _lat * (PI / 180);
+    double f1 = pow((pow(kEarthRadiusEquator, 2) * cos(lat_rad)), 2);
+    double f2 = pow((pow(kEarthRadiusPole, 2) * sin(lat_rad)), 2);
+    double f3 = pow((kEarthRadiusEquator * cos(lat_rad)), 2);
+    double f4 = pow((kEarthRadiusPole * sin(lat_rad)), 2);
+
     return sqrt((f1 + f2) / (f3 + f4));
 }
 
