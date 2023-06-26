@@ -148,7 +148,6 @@ float UCoordsConverter::GetRadiusAtLat(float _lat)
     return sqrt((f1 + f2) / (f3 + f4));
 }
 
-
 double UCoordsConverter::GetRadiusAtLat_Precise(double _lat)
 {
     double lat_rad = _lat * (PI / 180);
