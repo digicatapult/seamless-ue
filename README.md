@@ -18,6 +18,31 @@ Please create a file name "tokens.json" inside the "Other" folder. The file shou
 "mapbox":"yourKeyHere"
 }`
 
+### External scripts
+In order to parse and generate files unsupported by Unreal Engine this project uses a few external python scripts (built to executables) and a bat file. 
+
+All external tools and scripts can be found in the "Other" folder in this repository. 
+
+This is a list of exe files/python files/bat files used:
+- checkType.exe - used to check the .ply file pass type (pass 1 (mbes) and pass2 (subslam))
+- convertCSVtoJSON.exe - converts the submarine .csv path file to a .json file (supported by Unreal Engine)
+- createYMLfromBoundingBox.exe - used to generate bounding_box.yml files necessary for pass 2
+- ymlToCoords.exe - parse ned_origin.yml files and outputs lat and lon
+- ConvertPLYToLAS.bat - uses CloudCompare to convert .ply files to .las files (supported by Unreal Engine)
+
+Executable sources: 
+- checkType.exe source file: "Other/checkType_source/checkType.py"
+- convertCSVtoJSON.exe source file:: "Other/convertCSVtoJSON_source/convertCSVtoJSON.py"
+- createYMLfromBoundingBox.exe source file: "Other/createYMLfromBoundingBox_source/createYMLfromBoundingBox.py
+- ymlToCoords.exe source file: "Other/ymlToCoords_source/ymlToCoords.py"
+
+To build executables from sources: 
+- install pyinstaller and all other prerequisites for the python file you're trying to build 
+- Generate executables via command line with: `pyinstaller my_script.py --onefile`
+
 ### Packaging
 
-//TODO
+After packaging the project for Windows it is necessary to copy the "Other" folder inside the 
+**[build folder]/SEAMless/**
+
+Make sure this folder includes the tokens.json file (**Mapbox API** instructions above)
