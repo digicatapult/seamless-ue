@@ -8,5 +8,3 @@
 *.laz filter=lfs diff=lfs merge=lfs -text
 *.las filter=lfs diff=lfs merge=lfs -text
 *.xyz filter=lfs diff=lfs merge=lfs -text
-Demo/2022-05-11-14-41_subslam_model.ply filter=lfs diff=lfs merge=lfs -text
-Demo/2022-05-11-14-41_mbes_model.ply filter=lfs diff=lfs merge=lfs -text
