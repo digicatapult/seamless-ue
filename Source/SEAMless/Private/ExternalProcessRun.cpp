@@ -14,6 +14,6 @@ void UExternalProcessRun::RunProcess(FString batPath, TArray<FString> args, int3
 		combinedArgs = combinedArgs + args[i];
 	}
 	uint32 uintid = 0;
-	FPlatformProcess::CreateProc(*batPath, *combinedArgs, false, false, false, &uintid, 2, nullptr, (pipe && pipe->IsValid()) ? pipe->WriteProcessPipe : nullptr);
+	FPlatformProcess::CreateProc(*batPath, *combinedArgs, false, true, true, &uintid, 2, nullptr, (pipe && pipe->IsValid()) ? pipe->WriteProcessPipe : nullptr);
 	id = uintid;
 }
