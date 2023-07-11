@@ -6,13 +6,17 @@ def make_json(csvFilePath, jsonFilePath):
     with open(csvFilePath, encoding='utf-8') as csvf:
         csvReader = csv.DictReader(csvf)
         index = 0
-        for rows in csvReader:
-            key = index #rows['timestamp']
-            data[key] = rows
+        for rows in csvReader: 
+            key = index
+            data[key] = rows['field.latitude'] + ";"+  rows['field.longitude']
+        #    key = index #rows['timestamp']
+        #    data[key] = rows
             index = index + 1
     with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
         jsonf.write(json.dumps(data, indent=4))
  
 make_json(sys.argv[1], sys.argv[2])
+
+#make_json("hnav_msgs.csv", "zzz.json")
 
 print("DONE!")
