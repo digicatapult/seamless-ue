@@ -8,7 +8,8 @@ Unreal project for [SEAMless](https://gtr.ukri.org/projects?ref=10011940) - Subs
 
 - [Unreal Engine 5.2](https://www.unrealengine.com/en-US/download)
 - [Cloud Compare 2.12.4](https://www.danielgm.net/cc/) for `.ply` -> `.las` conversion, installed in the default folder (C:\Program Files\CloudCompare). 
- #### Warning: do not use any other version of Cloud Compare that is not 2.12.4 as this will BREAK your build :warning::warning::warning: 
+ #### Warning: do not use any other version of Cloud Compare that is not 2.12.4 as this will BREAK your build :warning::warning:
+  [Get the correct version here](https://www.danielgm.net/cc/release/CloudCompare_v2.12.4_setup_x64.exe)
 - [Mapbox](https://www.mapbox.com/) api key
 
 ### Mapbox API
