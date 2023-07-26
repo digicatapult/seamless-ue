@@ -25,6 +25,17 @@ public:
 		float& y
 	); 
 
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Global XY to GPS", Keywords = "GPS,XY, Global"), Category = "SEAMless | Converters")
+	static void GlobalXYtoGPS
+	(
+		float x,
+		float y,
+		float tl_lat,
+		float br_lat,
+		float& lat,
+		float& lon
+	);
+
 	UFUNCTION(BlueprintPure, meta = (DisplayName = "GPS to Screen XY", Keywords = "GPS,XY,Screen"), Category = "SEAMless | Converters")
 	static void GPStoScreenXY
 	(

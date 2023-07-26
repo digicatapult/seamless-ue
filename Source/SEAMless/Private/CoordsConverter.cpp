@@ -18,6 +18,21 @@ void UCoordsConverter::GPStoGlobalXY
     y = radius * lat; 
 }
 
+void UCoordsConverter::GlobalXYtoGPS
+(
+    float x,
+    float y, 
+    float tl_lat,
+    float br_lat,
+    float& lat,
+    float& lon 
+)
+{ 
+    float radius = GetRadiusAtLat(tl_lat);
+    lon = x / radius * cos((tl_lat + br_lat) / 2);
+    lat = y / radius;
+}
+
 void UCoordsConverter::GPStoScreenXY
 (
     float lat, 
