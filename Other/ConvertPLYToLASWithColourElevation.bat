@@ -1,0 +1,2 @@
+@echo off
+"C:\Program Files\CloudCompare\CloudCompare.exe" -SILENT -O %1 -COORD_TO_SF Z -SF_COLOR_SCALE %3 -SET_ACTIVE_SF 0 -SF_CONVERT_TO_RGB FALSE -C_EXPORT_FMT LAS  -SAVE_CLOUDS FILE %2
