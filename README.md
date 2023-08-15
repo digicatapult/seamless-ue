@@ -12,7 +12,31 @@ Unreal project for [SEAMless](https://gtr.ukri.org/projects?ref=10011940) - Subs
   [Get the correct version here](https://www.danielgm.net/cc/release/CloudCompare_v2.12.4_setup_x64.exe)
 - [Mapbox](https://www.mapbox.com/) api key
 
-### Mapbox API
+
+### Instructions
+<details>
+<summary>UI instructions ℹ️</summary>
+<br> 
+
+![Alt text](README_Images/ProjectSelectionMenu.png?raw=true "Project Selection")
+![Alt text](README_Images/ProjectMenu.jpg?raw=true "Project Menu")
+
+</details>
+
+<details>
+<summary>Packaging 📦</summary>
+<br>
+
+Packaging Instructions:
+- Package the project for Windows via Unreal Engine 5.2 (Platforms>Windows>Package Project)
+- Copy the "Other" folder from this repository to the package folde, it has to be inside the SEAMless folder:
+**[build folder]/SEAMless/**
+- Make sure this folder includes the tokens.json file (Please follow the **Mapbox API** instructions)
+</details>
+
+<details>
+<summary>Mapbox 🌍</summary>
+<br>
 To use the mapping features you need a mapbox api key. 
 Please create a file name "tokens.json" inside the "Other" folder. The file should contain your api key and be structured like this: 
 
@@ -20,7 +44,12 @@ Please create a file name "tokens.json" inside the "Other" folder. The file shou
 "mapbox":"yourKeyHere"
 }`
 
-### External scripts
+</details>
+
+
+<details>
+<summary>List of external tools 🧰️</summary>
+<br>
 In order to parse and generate files unsupported by Unreal Engine this project uses a few external python scripts (built to executables) and a bat file. 
 
 All external tools and scripts can be found in the "Other" folder in this repository. 
@@ -37,14 +66,26 @@ Executable sources:
 - convertCSVtoJSON.exe source file:: "Other/convertCSVtoJSON_source/convertCSVtoJSON.py"
 - createYMLfromBoundingBox.exe source file: "Other/createYMLfromBoundingBox_source/createYMLfromBoundingBox.py
 - ymlToCoords.exe source file: "Other/ymlToCoords_source/ymlToCoords.py"
+</details>
 
-To build executables from sources: 
-- install pyinstaller and all other prerequisites for the python file you're trying to build 
+<details>
+<summary>Building external tools from source 🛠</summary>
+<br>
+
+Building instructions: 
+- install Python (we used 3.11 to build the executables)
+- install pyinstaller and all other prerequisites for the python file you're trying to build
 - Generate executables via command line with: `pyinstaller my_script.py --onefile`
 
-### Packaging
+</details>
 
-After packaging the project for Windows it is necessary to copy the "Other" folder inside the 
-**[build folder]/SEAMless/**
+### Walkthroughs
 
-Make sure this folder includes the tokens.json file (**Mapbox API** instructions above)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZXmOEOAKnzc" target="_blank">
+ <img src="http://img.youtube.com/vi/ZXmOEOAKnzc/mqdefault.jpg" alt="SEAMless Short Walkthrough" width="480" height="270" border="10" />
+</a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=G3ogTYVf-TI" target="_blank">
+ <img src="http://img.youtube.com/vi/G3ogTYVf-TI/mqdefault.jpg" alt="SEAMless Long Walkthrough" width="480" height="270" border="10" />
+</a>
+
