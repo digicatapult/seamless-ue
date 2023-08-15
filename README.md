@@ -29,6 +29,7 @@ Work-in-Progress
 <details>
 <summary>Packaging 📦</summary>
 <br>
+
 Packaging Instructions:
 - Package the project for Windows via Unreal Engine 5.2 (Platforms>Windows>Package Project)
 - Copy the "Other" folder from this repository to the package folde, it has to be inside the SEAMless folder:
@@ -73,10 +74,12 @@ Executable sources:
 <details>
 <summary>Building external tools from source 🛠</summary>
 <br>
+
 Building instructions: 
 - install Python (we used 3.11 to build the executables)
 - install pyinstaller and all other prerequisites for the python file you're trying to build
 - Generate executables via command line with: `pyinstaller my_script.py --onefile`
+
 </details>
 
 ### Walkthroughs
