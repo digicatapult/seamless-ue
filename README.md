@@ -73,9 +73,9 @@ Executable sources:
 <details>
 <summary>Building external tools from source 🛠</summary>
 <br>
-Building instructions:
+Building instructions: 
 - install Python (we used 3.11 to build the executables)
-- install pyinstaller and all other prerequisites for the python file you're trying to build 
+- install pyinstaller and all other prerequisites for the python file you're trying to build
 - Generate executables via command line with: `pyinstaller my_script.py --onefile`
 </details>
 
