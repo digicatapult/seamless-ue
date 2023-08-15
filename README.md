@@ -15,11 +15,24 @@ Unreal project for [SEAMless](https://gtr.ukri.org/projects?ref=10011940) - Subs
 
 ### Instructions
 <details>
+<summary>UI and UX 🐋</summary>
+<br> 
+Work-in-Progress
+</details>
+
+<details>
+<summary>General Information ℹ️</summary>
+<br> 
+Work-in-Progress
+</details>
+
+<details>
 <summary>Packaging 📦</summary>
 <br>
-After packaging the project for Windows it is necessary to copy the "Other" folder inside the 
+- Package the project for Windows via Unreal Engine 5.2 (Platforms>Windows>Package Project)
+- Copy the "Other" folder from this repository to the package folde, it has to be inside the SEAMless folder:
 **[build folder]/SEAMless/**
-Make sure this folder includes the tokens.json file (Please follow the **Mapbox API** instructions)
+- Make sure this folder includes the tokens.json file (Please follow the **Mapbox API** instructions)
 </details>
 
 <details>
@@ -62,3 +75,7 @@ Executable sources:
 - install pyinstaller and all other prerequisites for the python file you're trying to build 
 - Generate executables via command line with: `pyinstaller my_script.py --onefile`
 </details>
+
+### Walkthroughs
+
+Work-in-Progress
