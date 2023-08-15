@@ -85,6 +85,10 @@ Building instructions:
 ### Walkthroughs
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZXmOEOAKnzc" target="_blank">
- <img src="http://img.youtube.com/vi/ZXmOEOAKnzc/mqdefault.jpg" alt="Watch the video" width="480" height="270" border="10" />
+ <img src="http://img.youtube.com/vi/ZXmOEOAKnzc/mqdefault.jpg" alt="SEAMless Short Walkthrough" width="480" height="270" border="10" />
 </a>
- 
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=G3ogTYVf-TI" target="_blank">
+ <img src="http://img.youtube.com/vi/G3ogTYVf-TI/mqdefault.jpg" alt="SEAMless Long Walkthrough" width="480" height="270" border="10" />
+</a>
+
