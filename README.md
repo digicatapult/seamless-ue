@@ -15,15 +15,12 @@ Unreal project for [SEAMless](https://gtr.ukri.org/projects?ref=10011940) - Subs
 
 ### Instructions
 <details>
-<summary>UI and UX 🐋</summary>
+<summary>UI instructions ℹ️</summary>
 <br> 
-Work-in-Progress
-</details>
 
-<details>
-<summary>General Information ℹ️</summary>
-<br> 
-Work-in-Progress
+![Alt text](README_Images/ProjectSelectionMenu.png?raw=true "Project Selection")
+![Alt text](README_Images/ProjectMenu.jpg?raw=true "Project Menu")
+
 </details>
 
 <details>
