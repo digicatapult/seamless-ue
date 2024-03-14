@@ -1,5 +1,9 @@
 # seamless-ue
 
+## Deprecation Notice
+This application was deprecated on March 14th 2024, there will be no further dependency or security updates.
+---
+
 Unreal project for [SEAMless](https://gtr.ukri.org/projects?ref=10011940) - Subsea Enhanced Autonomous Mapping. An application that visualises 3D mapping to deliver the 'Google Maps' of subsea.
 
 ## Getting started
